@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Yege Learning</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yege: {
+                            header: '#233329',
+                            body: '#8B5E3C',
+                            card: '#3E2723',
+                            green: '#4A6741',
+                            cream: '#FEFAE0',
+                            muted: '#E0D5C1',
+                            accent: '#A3B18A'
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #3E2723; }
+        ::-webkit-scrollbar-thumb { background: #4A6741; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #5d8252; }
+        
+        .glass-panel {
+            background: rgba(62, 39, 35, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        
+        .glass-header {
+            background: rgba(35, 51, 41, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .ambient-blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        h2 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #FEFAE0;
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+
+        p, ul, li {
+            color: #E0D5C1;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        ul { list-style-type: disc; padding-left: 1.5rem; }
+    </style>
+</head>
+<body class="bg-[#8B5E3C] text-white antialiased selection:bg-yege-green selection:text-white min-h-screen">
+
+    <div class="ambient-blob bg-green-600 w-96 h-96 top-0 left-0 animate-blob"></div>
+    <div class="ambient-blob bg-yellow-700 w-96 h-96 bottom-0 right-0 animate-blob animation-delay-2000"></div>
+
+    <nav class="sticky top-4 z-50 w-[95%] max-w-7xl mx-auto rounded-2xl glass-header shadow-2xl transition-all duration-300 mb-12">
+        <div class="px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex items-center gap-2 group cursor-pointer">
+                    <span class="font-bold text-2xl tracking-tight text-white group-hover:text-green-300 transition-colors">YEGE</span>
+                </a>
+                <div class="flex gap-6">
+                    <a href="terms.html" class="text-yege-muted hover:text-white font-medium transition-colors text-sm">Terms of Service</a>
+                    <a href="index.html" class="text-green-300 hover:text-white font-medium transition-colors text-sm flex items-center gap-2">
+                        &larr; Return Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="animate-fade-in px-4 pb-20">
+        <div class="max-w-5xl mx-auto glass-panel rounded-[2rem] p-8 md:p-16 border border-white/10 shadow-2xl">
+            
+            <div class="border-b border-white/10 pb-8 mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Privacy Policy</h1>
+                <p class="text-sm text-yege-muted">Effective Date: January 1, 2026</p>
+            </div>
+
+            <section>
+                <p class="text-lg leading-relaxed">At Yege Learning ("we," "us," or "our"), we value the trust you place in us when you share your personal information. This Privacy Policy describes how we collect, use, and disclose your information in connection with our website, services, and applications.</p>
+
+                <h2>1. Information We Collect</h2>
+                <p>We collect information to provide better services to all our users. The types of information we collect include:</p>
+                
+                <h3>1.1 Information You Provide to Us</h3>
+                <ul>
+                    <li><strong>Account Information:</strong> When you register for our services, we collect personal details such as your name, email address, phone number, and mailing address.</li>
+                    <li><strong>Student Information:</strong> We collect information about the student receiving tutoring, including name, age, grade level, school, and specific academic needs or challenges.</li>
+                    <li><strong>Payment Information:</strong> We collect billing details to process payments. Note that we do not store full credit card numbers; transactions are processed by third-party secure payment gateways.</li>
+                    <li><strong>Communications:</strong> We collect information when you contact us via email, chat, or forms, including the content of your messages.</li>
+                </ul>
+
+                <h3>1.2 Information We Collect Automatically</h3>
+                <ul>
+                    <li><strong>Usage Data:</strong> We may collect information on how the Service is accessed and used, including your computer's Internet Protocol (IP) address, browser type, browser version, and the pages of our Service that you visit.</li>
+                    <li><strong>Cookies:</strong> We use cookies and similar tracking technologies to track activity on our Service and hold certain information. You can instruct your browser to refuse all cookies, but some portions of our Service may not function properly without them.</li>
+                </ul>
+
+                <h2>2. How We Use Your Information</h2>
+                <p>Yege Learning uses the collected data for various purposes:</p>
+                <ul>
+                    <li>To provide, maintain, and improve our Service.</li>
+                    <li>To match students with appropriate tutors based on academic needs and learning styles.</li>
+                    <li>To notify you about changes to our Service.</li>
+                    <li>To provide customer support and respond to your inquiries.</li>
+                    <li>To monitor the usage of our Service and detect, prevent, and address technical issues.</li>
+                    <li>To process payments and send invoices.</li>
+                </ul>
+
+                <h2>3. Data Protection of Minors</h2>
+                <p>Protecting the privacy of young children is especially important. For users under the age of 18, we require consent from a parent or legal guardian before collecting personal information. We do not knowingly collect personal identifiable information from children without verification of parental consent.</p>
+                <p>If you are a parent or guardian and you are aware that your child has provided us with Personal Data without your consent, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</p>
+
+                <h2>4. Disclosure of Data</h2>
+                <p>We do not sell, trade, or otherwise transfer your Personally Identifiable Information to outside parties for marketing purposes. We may disclose your data in the following good faith beliefs:</p>
+                <ul>
+                    <li><strong>Service Providers:</strong> We may employ third-party companies and individuals to facilitate our Service (e.g., payment processors, video conferencing tools), who have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</li>
+                    <li><strong>Legal Requirements:</strong> To comply with a legal obligation, protect and defend the rights or property of Yege Learning, or protect the personal safety of users of the Service or the public.</li>
+                </ul>
+
+                <h2>5. Data Security</h2>
+                <p>The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+
+                <h2>6. Third-Party Links</h2>
+                <p>Our Service may contain links to other sites that are not operated by us. If you click a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+
+                <h2>7. Your Data Rights</h2>
+                <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+                <ul>
+                    <li>The right to access, update, or delete the information we have on you.</li>
+                    <li>The right of rectification (to correct inaccurate information).</li>
+                    <li>The right to object to our processing of your Personal Data.</li>
+                    <li>The right to request a copy of the information we have on you.</li>
+                </ul>
+
+                <h2>8. Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top of this Privacy Policy. You are advised to review this Privacy Policy periodically for any changes.</p>
+
+                <h2>9. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                <ul class="list-none pl-0 mt-4 space-y-2">
+                    <li class="flex items-center gap-3">
+                        <span class="text-green-300 font-bold">Email:</span>
+                        <span class="text-white">info@yegelearning.ca</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-green-300 font-bold">Mail:</span>
+                        <span class="text-white">Yege Learning, Privacy Officer, Edmonton, AB, Canada</span>
+                    </li>
+                </ul>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="glass-panel border-t border-white/10 bg-black/20">
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center text-xs text-white/30">
+            &copy; 2026 Yege Learning. All rights reserved. <br>
+            <span class="mt-2 block">Strong roots, steady growth.</span>
+        </div>
+    </footer>
+</body>
+</html>
