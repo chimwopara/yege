@@ -292,7 +292,7 @@
                     <div>
                         <h3 className="text-white font-bold mb-4 uppercase tracking-widest text-xs opacity-70">Contact</h3>
                         <ul className="space-y-3 text-sm text-yege-muted">
-                            <li className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"><MessageCircle size={14}/> info@yegelearning.ca</li>
+                            <li className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"><MessageCircle size={14}/> info@yegelearning.com</li>
                             <li className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"><Clock size={14}/> ‭+1 (587) 568-0927‬</li>
                         </ul>
                     </div>
@@ -410,7 +410,7 @@
                 }
 
                 // REPLACE "YOUR_EMAIL_HERE" WITH YOUR ACTUAL EMAIL ADDRESS
-                fetch("https://formsubmit.co/ajax/info@yegelearning.ca", {
+                fetch("https://formsubmit.co/ajax/info@yegelearning.com", {
                     method: "POST",
                     body: formDataToSend
                 })
@@ -420,7 +420,7 @@
                     setFormData({ name: '', email: '', message: '' });
                     setSelectedFile(null);
                 })
-                .catch(error => {
+                .comtch(error => {
                     console.error('Error:', error);
                     alert("Something went wrong. Please try again later.");
                     setFormStatus('idle');
@@ -922,7 +922,7 @@
                 }
 
                 // REPLACE "YOUR_EMAIL_HERE" WITH YOUR ACTUAL EMAIL ADDRESS
-                fetch("https://formsubmit.co/ajax/info@yegelearning.ca", {
+                fetch("https://formsubmit.co/ajax/info@yegelearning.com", {
                     method: "POST",
                     body: formDataToSend
                 })
@@ -932,7 +932,7 @@
                     setFormData({ name: '', email: '', subjects: [], motivation: '' });
                     setSelectedResume(null);
                 })
-                .catch(error => {
+                .comtch(error => {
                     console.error('Error:', error);
                     alert("Something went wrong. Please try again later.");
                     setFormStatus('idle');
