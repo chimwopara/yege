@@ -6,17 +6,13 @@
     <title>Yege Learning - Personalized Online Tutoring</title>
     <link rel="icon" type="image/png" href="logo.png">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- React & ReactDOM -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     
-    <!-- Babel for JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <!-- Tailwind Config for Custom Colors & Fonts -->
     <script>
         tailwind.config = {
             theme: {
@@ -93,11 +89,12 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
         
+        /* UPDATED HEADER COLOR: Lighter Green */
         .glass-header {
-            background: rgba(35, 51, 41, 0.85); /* Matches new header color with transparency */
+            background: rgba(74, 103, 65, 0.9); /* Changed from dark #233329 to lighter #4A6741 equivalent */
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .glass-button {
@@ -119,7 +116,6 @@
 </head>
 <body class="bg-[#8B5E3C] text-white antialiased selection:bg-yege-green selection:text-white min-h-screen overflow-x-hidden">
 
-    <!-- Ambient Background Lighting -->
     <div class="ambient-blob bg-green-600 w-96 h-96 top-0 left-0 animate-blob"></div>
     <div class="ambient-blob bg-yellow-700 w-96 h-96 bottom-0 right-0 animate-blob animation-delay-2000"></div>
     <div class="ambient-blob bg-yege-card w-80 h-80 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-blob animation-delay-4000"></div>
@@ -297,7 +293,7 @@
                         <h3 className="text-white font-bold mb-4 uppercase tracking-widest text-xs opacity-70">Contact</h3>
                         <ul className="space-y-3 text-sm text-yege-muted">
                             <li className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"><MessageCircle size={14}/> info@yegelearning.ca</li>
-                            <li className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"><Clock size={14}/> 1-800-YEGE-EDU</li>
+                            <li className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer"><Clock size={14}/> ‭+1 (587) 568-0927‬</li>
                         </ul>
                     </div>
 
@@ -331,7 +327,8 @@
                     </div>
                 </div>
                 <div className="max-w-7xl mx-auto px-6 py-6 border-t border-white/5 text-center text-xs text-white/30">
-                    &copy; {new Date().getFullYear()} Yege Learning. All rights reserved.
+                    &copy; {new Date().getFullYear()} Yege Learning. All rights reserved. <br/>
+                    <a href="https://wopara.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors mt-2 inline-block">Website by Chim</a>
                 </div>
             </footer>
         );
@@ -437,7 +434,7 @@
                         <div className="max-w-5xl mx-auto relative z-10 text-center">
                             <div className="inline-block animate-float">
                                 <span className="glass-button py-2 px-6 rounded-full text-yege-accent border-yege-green/30 text-sm font-bold tracking-wide uppercase mb-8 backdrop-blur-md">
-                                    ✨ Now Enrolling for Fall 2026
+                                    ✨ Now Enrolling
                                 </span>
                             </div>
                             
@@ -484,7 +481,11 @@
                                     { icon: FlaskConical, label: "Science", bg: "from-purple-500/20 to-purple-600/20", border: "border-purple-400/30" },
                                     { icon: Globe, label: "Social Studies", bg: "from-green-500/20 to-emerald-600/20", border: "border-green-400/30" }
                                 ].map((subject, idx) => (
-                                    <div key={idx} className={`bg-gradient-to-br ${subject.bg} border ${subject.border} backdrop-blur-md p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-105 transition-all duration-300 group cursor-pointer shadow-lg`}>
+                                    <div 
+                                        key={idx} 
+                                        onClick={() => navigateTo('programs')}
+                                        className={`bg-gradient-to-br ${subject.bg} border ${subject.border} backdrop-blur-md p-8 rounded-3xl flex flex-col items-center justify-center gap-4 hover:scale-105 transition-all duration-300 group cursor-pointer shadow-lg active:scale-95`}
+                                    >
                                         <div className="bg-white/10 p-4 rounded-2xl group-hover:bg-white/20 transition-colors">
                                             <subject.icon size={36} className="text-white drop-shadow-md" />
                                         </div>
