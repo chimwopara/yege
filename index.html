@@ -175,6 +175,18 @@
             ];
 
             const navRef = useRef(null);
+            
+            // Function to handle Enroll click
+            const handleEnrollClick = () => {
+                setActivePage('programs');
+                // Small timeout to allow the Programs page to render before scrolling
+                setTimeout(() => {
+                    const pricingSection = document.getElementById('pricing');
+                    if (pricingSection) {
+                        pricingSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 100);
+            };
 
             // Close menu when clicking outside
             useEffect(() => {
@@ -232,7 +244,7 @@
                                 ))}
                                 <button 
                                     className="ml-4 bg-gradient-to-r from-green-600 to-green-800 hover:from-green-500 hover:to-green-700 text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2 uppercase text-xs tracking-wider border border-green-400/30"
-                                    onClick={() => alert("Redirecting to Consultation Flow...")}
+                                    onClick={handleEnrollClick}
                                 >
                                     Enroll Today <ArrowRight size={14} />
                                 </button>
@@ -253,7 +265,7 @@
                             <div className="px-4 pt-4 pb-6 space-y-3">
                                 <button 
                                     className="w-full bg-gradient-to-r from-green-600 to-green-800 text-white px-4 py-3 rounded-xl font-bold shadow-lg mb-4 flex justify-center items-center gap-2"
-                                    onClick={() => { alert("Redirecting..."); toggleMobileMenu(); }}
+                                    onClick={() => { handleEnrollClick(); toggleMobileMenu(); }}
                                 >
                                     Enroll Today <ArrowRight size={18} />
                                 </button>
@@ -392,6 +404,14 @@
                     setSelectedFile(e.target.files[0]);
                 }
             };
+            
+            // Function to handle scroll to support
+            const scrollToSupport = () => {
+                const supportSection = document.getElementById('support');
+                if (supportSection) {
+                    supportSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            };
 
             const handleSupportSubmit = (e) => {
                 e.preventDefault();
@@ -451,7 +471,7 @@
                             
                             <div className="mt-14 flex justify-center gap-4">
                                 <button 
-                                    onClick={() => alert("Opening Consultation Flow...")}
+                                    onClick={scrollToSupport}
                                     className="group relative bg-white/10 hover:bg-white/20 text-white px-10 py-5 rounded-full font-bold text-lg shadow-[0_0_40px_-10px_rgba(74,103,65,0.6)] border border-white/20 transition-all duration-300 flex items-center gap-3 overflow-hidden backdrop-blur-md"
                                 >
                                     <span className="relative z-10">Book Free Learning Check-Up</span>
@@ -581,7 +601,8 @@
                     </section>
 
                     {/* Support Combined Section */}
-                    <section className="py-20 px-4" id="support">
+                    {/* UPDATED: Added scroll-mt-32 to fix scroll position obstruction */}
+                    <section className="py-20 px-4 scroll-mt-32" id="support">
                         <div className="max-w-3xl mx-auto glass-panel rounded-[2rem] p-10 border border-white/10 shadow-2xl relative">
                             <div className="text-center mb-10">
                                 <h2 className="text-3xl font-bold text-white mb-2">Chat Support & Homework Feedback</h2>
@@ -748,7 +769,8 @@
                     </section>
 
                     {/* Pricing */}
-                    <section className="py-20 max-w-7xl mx-auto">
+                    {/* UPDATED: Added scroll-mt-32 to fix scroll position obstruction */}
+                    <section className="py-20 max-w-7xl mx-auto scroll-mt-32" id="pricing">
                         <div className="text-center mb-16">
                             <h2 className="text-4xl font-bold text-white mb-2">Growth-Oriented Pricing</h2>
                             <p className="text-yege-muted text-lg">Choose the level of support that fits your child's needs.</p>
